@@ -6,9 +6,9 @@ Code generator for the Vue project.
 ### Installation
 
 ```bash
-yarn add --dev @michaellyu/vue-generator
+yarn add --dev vue-generator-cli
 // or
-npm i -D @michaellyu/vue-generator
+npm i -D vue-generator-cli
 ```
 
 ### Usage
