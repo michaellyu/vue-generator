@@ -1,0 +1,12 @@
+---
+  router:
+    - index
+    - account:
+      - login
+    - article:
+      - article-list
+      - name: article-detail
+        path: ":article_id(\\d+)"
+        children:
+          - index
+          - edit

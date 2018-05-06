@@ -1,0 +1,34 @@
+{
+  "name": "vue-generator",
+  "version": "0.1.0",
+  "description": "vue gennerator",
+  "author": "michaellyu <michaellyu@outlook.com>",
+  "license": "MIT",
+  "bin": {
+    "vue-generator": "bin/vue-generator.js",
+    "vue-generator-init": "bin/vue-generator-init.js",
+    "vue-generator-all": "bin/vue-generator-all.js",
+    "vue-generator-router": "bin/vue-generator-router.js",
+    "vue-generator-components": "bin/vue-generator-components.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaellyu/vue-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/michaellyu/vue-generator/issues"
+  },
+  "homepage": "https://github.com/michaellyu/vue-generator",
+  "keywords": [
+    "vue",
+    "generator"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "commander": "^2.11.0",
+    "del": "^3.0.0",
+    "js-yaml": "^3.10.0",
+    "mkdirs": "^0.0.2"
+  }
+}

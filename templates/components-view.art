@@ -1,0 +1,17 @@
+<template{{@ components.template ? ' lang="' + components.template + '"' : ''}}>
+  <div class="{{components.dir}}">
+    <router-view></router-view>
+  </div>
+</template>
+
+<script{{@ components.script ? ' lang="' + components.script + '"' : ''}}>
+export default {
+  name: '{{components.componentName}}'{{if components.eslint === 'airbnb'}},{{/if}}
+}{{if eslint === 'airbnb'}};{{/if}}
+</script>
+
+<style{{@ components.style ? ' lang="' + components.style + '"' : ''}} scoped>
+.{{components.dir}} {
+
+}
+</style>

@@ -1,0 +1,15 @@
+import Vue from 'vue'{{if eslint === 'airbnb'}};{{/if}}
+import Router from 'vue-router'{{if eslint === 'airbnb'}};{{/if}}{{each routers router}}{{if router.children}}
+import {{router.name}} from './{{router.dir}}/index'{{if eslint === 'airbnb'}};{{/if}}{{/if}}{{/each}}
+
+Vue.use(Router){{if eslint === 'airbnb'}};{{/if}}
+
+export default new Router({
+  routes: [{{each routers router index}}{{if !router.children}}
+    {
+      path: '{{router.path}}',
+      component: resolve => require(['{{router.component}}'], resolve){{if router.eslint === 'airbnb'}},{{/if}}
+    }{{if index !== routers.length - 1 || router.eslint === 'airbnb'}},{{/if}}{{else}}
+    {{router.name}}{{if index !== routers.length - 1 || router.eslint === 'airbnb'}},{{/if}}{{/if}}{{/each}}
+  ]{{if eslint === 'airbnb'}},{{/if}}
+}){{if eslint === 'airbnb'}};{{/if}}
