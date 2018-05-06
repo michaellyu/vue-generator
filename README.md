@@ -27,7 +27,7 @@ vue-generator components -f
 vue-generator router -f
 ```
 
-#### Configuration
+### Configuration
 
 .vuegeneratorrc.js
 
