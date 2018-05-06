@@ -8,7 +8,7 @@ module.exports = {
   },
   components: {
     src: './router.yaml',
-    dist: './src/compoents',
+    dist: './src/components',
     template: '',
     script: '',
     style: 'scss',
