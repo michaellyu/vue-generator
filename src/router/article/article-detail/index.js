@@ -1,14 +1,14 @@
 export default {
-  path: ':article_id(\d+)',
+  path: ':article_id(\\d+)',
   component: resolve => require(['@/components/article/article-detail/ArticleDetail'], resolve),
   children: [
     {
       path: 'index',
-      component: resolve => require(['@/components/article/article-detail/Index'], resolve),
+      component: resolve => require(['@/components/article/article-detail/Index'], resolve)
     },
     {
       path: 'edit',
-      component: resolve => require(['@/components/article/article-detail/Edit'], resolve),
-    },
-  ],
+      component: resolve => require(['@/components/article/article-detail/Edit'], resolve)
+    }
+  ]
 }

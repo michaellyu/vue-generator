@@ -11,6 +11,6 @@ module.exports = {
     dist: './src/components',
     template: '',
     script: '',
-    style: 'scss',
+    style: '',
   },
 };

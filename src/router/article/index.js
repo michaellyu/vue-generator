@@ -6,8 +6,8 @@ export default {
   children: [
     {
       path: 'article-list',
-      component: resolve => require(['@/components/article/ArticleList'], resolve),
+      component: resolve => require(['@/components/article/ArticleList'], resolve)
     },
-    articleDetail,
-  ],
+    articleDetail
+  ]
 }

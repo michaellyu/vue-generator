@@ -72,9 +72,8 @@ function getRouter(config) {
 
   function makeRouter(parent, name, path, hasChildren) {
     const router = {
-      eslint: config.eslint,
       name: utils.camelize(name),
-      path: `${parent ? '' : '/'}${utils.hyphenate(path)}`,
+      path: `${parent ? '' : '/'}${utils.hyphenate(path.replace(/\\/g, '\\\\'))}`,
       dir: utils.hyphenate(name),
       fulldir: `${parent ? parent.fulldir + '/' : ''}${utils.hyphenate(name)}`,
       component: `${config.componentsRoot
@@ -88,17 +87,17 @@ function getRouter(config) {
 }
 
 function writeRouter(router, config, force) {
-  // if (utils.exists(config.dist)) {
-  //   utils.rmdir(config.dist);
-  // }
-
   write(router);
 
   function write(router) {
     if (router.routers) {
-      utils.writeFile(`${config.dist}/index.js`, template(utils.resolve(__dirname, '../templates/router.art'), router), force);
+      utils.writeFile(`${config.dist}/index.js`, template(utils.resolve(__dirname, '../templates/router.art'), {
+        eslint: config.eslint,
+        rootRouter: router,
+      }), force);
     } else {
       utils.writeFile(`${config.dist}/${router.fulldir}/index.js`, template(utils.resolve(__dirname, '../templates/router-module.art'), {
+        eslint: config.eslint,
         router,
       }), force);
     }

@@ -6,11 +6,11 @@
 
 <script>
 export default {
-  name: 'ArticleList',
+  name: 'ArticleList'
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .article-list {
 
 }

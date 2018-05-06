@@ -4,7 +4,7 @@ export default {
   children: [
     {
       path: 'login',
-      component: resolve => require(['@/components/account/Login'], resolve),
-    },
-  ],
+      component: resolve => require(['@/components/account/Login'], resolve)
+    }
+  ]
 }

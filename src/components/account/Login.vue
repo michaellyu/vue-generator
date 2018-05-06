@@ -6,11 +6,11 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'Login'
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .login {
 
 }

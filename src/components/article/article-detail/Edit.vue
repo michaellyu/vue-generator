@@ -6,11 +6,11 @@
 
 <script>
 export default {
-  name: 'Edit',
+  name: 'Edit'
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .edit {
 
 }

@@ -1,16 +1,16 @@
 module.exports = {
   template: 'default',
-  eslint: 'airbnb',
+  eslint: 'standard',
   router: {
     src: './router.yaml',
     dist: './src/router',
-    componentsRoot: '@/components'
+    componentsRoot: '@/components',
   },
   components: {
     src: './router.yaml',
-    dist: './src/compoents',
+    dist: './src/components',
     template: '',
     script: '',
-    style: 'scss',
+    style: '',
   },
 };

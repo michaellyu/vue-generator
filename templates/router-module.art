@@ -6,8 +6,8 @@
   children: [{{each router.children child index}}{{if !child.children}}
     {
       path: '{{child.path}}',
-      component: resolve => require(['{{child.component}}'], resolve){{if router.eslint === 'airbnb'}},{{/if}}
-    }{{if index !== router.children.length - 1 || child.eslint === 'airbnb'}},{{/if}}{{else}}
-    {{child.name}}{{if index !== router.children.length - 1 || child.eslint === 'airbnb'}},{{/if}}{{/if}}{{/each}}
-  ]{{if router.eslint === 'airbnb'}},{{/if}}{{/if}}
+      component: resolve => require(['{{child.component}}'], resolve){{if eslint === 'airbnb'}},{{/if}}
+    }{{if index !== router.children.length - 1 || eslint === 'airbnb'}},{{/if}}{{else}}
+    {{child.name}}{{if index !== router.children.length - 1 || eslint === 'airbnb'}},{{/if}}{{/if}}{{/each}}
+  ]{{if eslint === 'airbnb'}},{{/if}}{{/if}}
 }{{if eslint === 'airbnb'}};{{/if}}

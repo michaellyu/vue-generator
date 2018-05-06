@@ -1,17 +1,17 @@
 <template>
-  <div class="article">
+  <div class="account">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Article',
+  name: 'Account'
 }
 </script>
 
-<style lang="scss" scoped>
-.article {
+<style scoped>
+.account {
 
 }
 </style>

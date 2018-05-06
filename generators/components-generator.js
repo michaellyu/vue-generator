@@ -67,7 +67,6 @@ function getRouter(config) {
 
   function makeRouter(parent, name, path, hasChildren) {
     const router = {
-      eslint: config.eslint,
       name: utils.camelize(name),
       path: utils.hyphenate(path),
       dir: utils.hyphenate(name),
@@ -86,20 +85,18 @@ function getRouter(config) {
 }
 
 function writeComponents(router, config, force) {
-  if (utils.exists(config.dist)) {
-    utils.rmdir(config.dist);
-  }
-
   write(router);
 
   function write(router) {
     if (!router.routers) {
       if (router.children) {
         utils.writeFile(`${config.dist}/${router.fulldir ? router.fulldir + '/' : ''}${router.componentName}.vue`, template(utils.resolve(__dirname, '../templates/components-view.art'), {
+          eslint: config.eslint,
           components: router,
         }), force);
       } else {
         utils.writeFile(`${config.dist}/${router.componentdir ? router.componentdir + '/' : ''}/${router.componentName}.vue`, template(utils.resolve(__dirname, '../templates/components.art'), {
+          eslint: config.eslint,
           components: router,
         }), force);
       }
