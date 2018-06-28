@@ -66,3 +66,33 @@ router.yaml
           - index # index component & /article/(\d+)/index route
           - edit # edit component & /article/(\d+)/edit route
 ```
+
+### Result
+
+```shell
+src
+├── App.vue
+├── assets
+│   └── logo.png
+├── components
+│   ├── Index.vue
+│   ├── account
+│   │   ├── Account.vue
+│   │   └── Login.vue
+│   └── article
+│       ├── Article.vue
+│       ├── ArticleList.vue
+│       └── article-detail
+│           ├── ArticleDetail.vue
+│           ├── Edit.vue
+│           └── Index.vue
+├── main.js
+└── router
+    ├── account
+    │   └── index.js
+    ├── article
+    │   ├── article-detail
+    │   │   └── index.js
+    │   └── index.js
+    └── index.js
+```
