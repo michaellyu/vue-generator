@@ -1,7 +1,7 @@
 Vue Generator
 =============
 
-Code generator for the Vue project.
+Initial router and components for the Vue project.
 
 ### Installation
 
