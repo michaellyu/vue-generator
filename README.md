@@ -14,10 +14,11 @@ npm i -g vue-generator-cli
 ### Usage
 
 ```shell
+# cd a new Vue project
 # init router.yaml and .vuegeneratorrc.js
 vue-generator init
 # edit router.yaml and .vuegeneratorrc.js
-# create router and compoents
+# create router and components
 vue-generator all
 # edit router.yaml and .vuegeneratorrc.js
 # update components
