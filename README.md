@@ -7,19 +7,29 @@ Initial router and components for the Vue project.
 
 ```bash
 yarn global add vue-generator-cli
-// or
+# or
 npm i -g vue-generator-cli
 ```
 
 ### Usage
 
 ```shell
+# init vue project via @vue/cli
+vue create myproject
 # cd a new Vue project
+cd myproject
 # init router.yaml and .vuegeneratorrc.js
 vue-generator init
 # edit router.yaml and .vuegeneratorrc.js
 # create router and components
 vue-generator all
+# remove default router.js file
+mv src/router.js src/router.bak.js
+# run serve
+yarn run serve
+# or
+npm run serve
+# open browser http://localhost:8080/#/account/login
 # edit router.yaml and .vuegeneratorrc.js
 # update components
 vue-generator components -f
